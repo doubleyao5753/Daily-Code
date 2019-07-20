@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/* 2019-7-20
+		* 第01题>>>>>>>>>>>>>>>>
+		* 移除数组 arr 中的所有值与 item 相等的元素。
+		* 写出 (直接修改原数组) 和 (不直接修改数组 arr，结果返回新的数组) 两种方式的逻辑代码。
+		* */
+
+		// 不改原数组的解决方案：
+		
+		// Plan A: splice()
+		
+		function remove (arr,item) {
+			// 利用slice()  copy为一个新数组
+			var newArr = arr.slice(0)
+			for(var i = 0; i < newArr.length; i++ ) {
+				if (newArr[i] === item ) {
+					newArr.splice(i,1);
+					// 删掉元素后应将i减1，以便不影响下一个i的判断
+					i-- 
+				}
+			}
+			return newArr
+		}
+
+		// Plan B: filter()
+
+		function remove2 (arr,item) {
+			// filter() 方法会遍历数组中的每一个值，将其中满足其函数条件的值放到新数组返回
+			return arr.filter(function(el) {
+				return el != item
+			})
+		}
+
+		// Plan C: push() 大众解法
+		
+		function remove3 (arr,item) {
+			var newArr = [];
+			for (var i = 0; i < arr.length; i++ ) {
+				// 遍历每一个数，不等就将其push进新数组
+				if (arr[i] != item) {
+					newArr.push(arr[i])
+				}
+			}
+			return newArr
+		}
+
+
+		// 改原数组的解决方案：
+		
+		// Plan A: splice()
+
+		function out (arr, item) {
+			for (var i = 0; i < arr.length; i++ ) {
+				// 遍历每一个数，相等就将其剪掉
+				if (arr[i] === item) {
+					arr.splice(i,1)
+					i--
+				}
+			}
+			return arr
+		}
+
+		
+
+		var some = [1,4,2,1,2,8,6,5,5,3,4,6,3,2,1]
+		console.log( out(some,5) )
+
+
+		// console.log(remove([1,2,56,1,2,2],2))
+		// console.log(remove2([1,2,56,1,2,2],2))
+		// console.log(remove3([1,2,56,1,2,2],1))
+		// 
+		
+
+	</script>
+</body>
+</html>
