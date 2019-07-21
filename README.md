@@ -18,6 +18,7 @@ Algorithmic advancement
 > 输出：[1, 3, 4,10]
 > ```
 来源：[牛客网-JS能力测评经典题](https://www.nowcoder.com/ta/js-assessment)  
+难度：★☆☆☆☆  
 解析：[第 02 题](https://github.com/doubleyao5753/Daily-Code/issues/2)
 
 
@@ -32,5 +33,6 @@ Algorithmic advancement
 > 输出：[1, 3, 4]
 > ```
 来源：[牛客网-JS能力测评经典题](https://www.nowcoder.com/ta/js-assessment)  
+难度：★★☆☆☆  
 解析：[第 01 题](https://github.com/doubleyao5753/Daily-Code/issues/1)
 
