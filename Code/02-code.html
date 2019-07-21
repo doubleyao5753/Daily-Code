@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 2019-7-21
+		* 第02题>>>>>>>>>>>>>>>>
+		* 不改变原数组，末尾添加新元素，返回新数组
+		* */
+
+        // Plan A: 数组拷贝 + push()
+        // 普通的迭代拷贝（遍历拷贝）
+        function append(arr , item) {
+            var newArr = []
+            for (var i = 0 ; i < arr.length ; i++) {
+                // 遍历旧数组，将每个数值添加到新数组
+                newArr.push(arr[i])
+            }
+            newArr.push(item) // push unshift 返回数组长度
+            return newArr
+        }
+
+        // 使用slice()方法拷贝
+        function append2 (arr , item) {
+            var newArr = arr.slice(0) //slice(start,end)方法返回新数组
+            newArr.push(item)
+            return newArr
+        }
+
+        // 禁止！！！避免直接赋值拷贝
+        function appendNO (arr , item) {
+            var newArr = arr;
+            // 切记： 数组是引用类型，这样的拷贝只是拷贝了引用指针
+            // 修改新数组会对旧数组造成同样的影响。避免使用
+            newArr.push(item)
+            return newArr
+        }
+
+        // Plan B:  concat() 
+        function append0 (arr , item) {
+            return arr.concat(item)
+            // 牢记：concat()可以直接将值拼接到数组后面
+        }
+
+
+        console.log(append0([1,2,5,8],'5'))
+    </script>
+</body>
+</html>
