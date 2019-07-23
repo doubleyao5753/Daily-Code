@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 第三题：统计数组中某个值出现的次数
+
+        // Plan A:
+
+        function count(arr, item) {
+            var time = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === item) {
+                    time++;
+                }
+            }
+            return time
+        }
+
+        // Plan B: forEach()
+        function count2(arr, item) {
+            var time = 0;
+            arr.forEach(function (ele) {
+                ele === item ? time++ : 0
+            })
+            return time
+        }
+
+        // Plan C：filter()
+        function count3(arr, item) {
+            var newArr = arr.filter(function (a) {
+                return a === item
+            })
+            return newArr.length
+        }
+
+        // Plan D: map()
+        function count4(arr, item) {
+            var time = 0
+            //map()-->对数组中的每一项进行给定函数，
+            //返回每次函数调用的结果组成的数组；
+            arr.map(function (a) {
+                if (a === item) {
+                    time++
+                }
+            })
+            return time
+        }
+
+        var some = [1, 5, 5, 2, 4, 2, 6, 5, 4]
+        console.log(count4(some, 6))
+    </script>
+</body>
+
+</html>
