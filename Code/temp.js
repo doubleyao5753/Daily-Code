@@ -1,12 +1,13 @@
-// Plan D: map()
-function count4(arr, item) {
-    var time = 0
-    //map()-->对数组中的每一项进行给定函数，
-    //返回每次函数调用的结果组成的数组；
-    arr.map(function (a) {
-        if (a === item) {
-            time++
+function getRepeat2(arr) {
+    arr.sort();
+    var res = [];
+    for(var i = 0;i < arr.length ; i++) {
+        if (arr[i] === arr[i+1] && arr[i] !== arr[i-1]){
+            newArr.push(arr[i])
         }
-    })
-    return time
+        // if(arr[i] === arr[i+1] && res.indexOf(i) == -1){
+        //     res.push(arr[i])
+        // }
+    }
+    return res
 }
