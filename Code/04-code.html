@@ -78,7 +78,14 @@
 
 
 
-        // 数组去重  双for循环
+        // 双for循环去重
+       /*  逻辑：
+        定义结果数组，两层for循环，第一层遍历原数组，第二层遍历结果数组
+        重点：遍历原数组前定义一个空变量
+        遍历原数组后将变量设为false，也就是假设没有重复
+        并在这个假设条件下将当前遍历的值push进结果数组中去
+        在push之前插入结果数组的遍历，判断原数组与结果数组的同索引遍历值是否相等
+        若相等，则说明有重复，将为false的变量设为true并break结束循环 */
         function noRepeat(arr) {
             var newArr = [];
             var isRepeat;
@@ -97,8 +104,51 @@
             return newArr
         }
 
+        // filter() + indexOf() 最优解法
+        /* 逻辑：
+        在数组自带的filter()方法中的函数中，用到所有元素和索引两个参数
+        返回一个新数组，这个新数组应该满足的条件是：
+        每一个元素的索引必须等于他第一次出现的索引(利用indexOf方法)
+        也就是说，重复出现的值将会被过滤掉 */
+
+        function noRepeat2(arr) {
+            return arr.filter(function(e,index){
+                return arr.indexOf(e) === index
+            })
+        }
+
+        // forEach() + indexOf()
+        /* 逻辑：
+        定义结果数组，foreach原数组
+        在forEach的函数中，将每一个值push进结果数组
+        在push之前，若在结果数组中已经有了则return停止执行(用indexOf) */
+        function noRepeat3(arr) {
+            var res = []
+            arr.forEach(function(e){
+                if(res.indexOf(e) > -1) return
+                res.push(e)
+            })
+            return res
+        }
+
+        // sort() + 遍历或者forEach
+        逻辑：
+        定义结果数组，将原数组sort()排序
+        for循环或forEach，如果前一个值不等于后一个值，就将其push进结果数组
+        返回结果
+        function noRepeat4(arr){
+            var res = []
+            arr.sort()
+            for(var i=0;i<arr.length;i++){
+                if(arr[i] !== arr[i+1]){
+                    res.push(arr[i])
+                }
+            }
+            return res
+        }
+
         var some = [2,3,5,2,1,3,5]
-        console.log(getRepeat3(some))
+        console.log(noRepeat4(some))
     </script>
 </body>
 
