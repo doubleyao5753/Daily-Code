@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 查找指定元素在数组中的索引
+        // 实例：
+        // 输入：[1, 2, 4, 4, 3, 4, 3], 4
+        // 输出：[2, 3, 5]
+
+        // Plan A: forEach() or filter()
+        function getIndex(arr,item) {
+            var res = []
+            arr.forEach(function(ele,index) {
+                // 意思是：只有ele等于item时才会执行后边的表达式
+                ele == item && res.push(index)
+            })
+            return res
+        }
+        // filter与foreach的区别在于，filter的函数需要return
+        function getIndex(arr,item) {
+            var res = []
+            arr.filter(function(ele,index) {
+                return ele == item && res.push(index)
+            })
+            return res
+        }
+
+        // Plan B: 普通for循环
+        function getIndex2(arr,item) {
+            var res = []
+            for(var i = 0 ; i<arr.length ; i++){
+                if(arr[i] === item) {
+                    res.push(i)
+                }
+            }
+            return res
+        }
+
+
+
+        var some = [1, 2, 4, 4, 3, 4, 3]
+        console.log(getIndex2(some,4))
+
+    </script>
+
+</body>
+
+</html>
