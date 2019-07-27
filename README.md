@@ -10,6 +10,20 @@ Algorithmic advancement
 [Js数组方法总览-掘金](https://juejin.im/post/5bb753bd6fb9a05d2272b673#heading-22)
 
 
+
+### 2019-07-27
+**第 05 题**
+> 查找指定元素在数组中的索引
+> ```
+> 实例：
+> 输入：[1, 2, 4, 4, 3, 4, 3], 4
+> 输出：[2,3,5]
+>```
+来源：[牛客网-JS能力测评经典题](https://www.nowcoder.com/ta/js-assessment)  
+难度：★★☆☆☆  
+解析：[第 05 题](https://github.com/doubleyao5753/Daily-Code/issues/5)  
+
+
 ### 2019-07-24/25
 **第 04 题**
 > 经典数组算法题：数组去重与数组取重
