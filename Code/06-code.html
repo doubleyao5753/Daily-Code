@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // setInterval
+
+        function count(start, end) {
+            // 首先立即输出第一个
+            console.log(start++)
+            // 设置定时器并命名，比较起点终点大小
+            var timer = setInterval(function(){
+                start<=end? console.log(start++):clearInterval(timer)
+            },100)
+            // 返回带有清除定时器方法的对象
+            return {
+                cancel: function(){
+                    clearInterval(timer)
+                }
+            }
+        }
+
+        // setTimeout 不推荐
+        function count2(start , end) {
+            if (start <= end) {
+                console.log(start)
+                start++;
+                var timer = setTimeout(function(){count(start,end)},100)
+            }
+            return {
+                cancel: function(){
+                    clearTimeout(timer)
+                }
+            }
+        }
+
+        count2(1,5)
+
+    </script>
+</body>
+
+</html>
