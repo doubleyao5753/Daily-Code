@@ -10,6 +10,22 @@ Algorithmic advancement
 [Js数组方法总览-掘金](https://juejin.im/post/5bb753bd6fb9a05d2272b673#heading-22)
 
 
+### 2019-07-28
+**第 06 题**
+> 实现一个打点计时器  
+1. 从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1
+2. 返回的对象中需要包含一个 cancel 方法，用于停止定时操作
+3. 第一个数需要立即输出
+> ```
+> 实例：
+> 函数为两个参数  function count(start,end){......}
+> 输入：1,10
+> 控制台依次输出：1,2,3...9,10
+>```
+来源：[牛客网-JS能力测评经典题](https://www.nowcoder.com/ta/js-assessment)  
+难度：★★☆☆☆  
+解析：[第 06 题](https://github.com/doubleyao5753/Daily-Code/issues/6) 
+
 
 ### 2019-07-27
 **第 05 题**
