@@ -9,9 +9,14 @@ Algorithmic advancement
 ### 文章参考
 [Js数组方法总览-掘金](https://juejin.im/post/5bb753bd6fb9a05d2272b673#heading-22)  
 
+### 
 
-### 2019-08-02
-**第 08 题**
+### Get Start
+
+
+
+#### **2019-08-02 第 08 题**
+
 > 从数组中取出只出现了一次的数字 
 > ```
 > 输入: [4,1,2,1,2,5]
@@ -22,7 +27,8 @@ Algorithmic advancement
 难度：★★☆☆☆  
 解析：[第 08 题](https://github.com/doubleyao5753/Daily-Code/issues/8) 
 
-### 
+ ---
+
 #### **2019-07-31  第 07 题**
 
 > 反转数组——实现一个 reverse()  
