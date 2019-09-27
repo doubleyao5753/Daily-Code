@@ -13,7 +13,18 @@ Algorithmic advancement
 
 ### Get Start
 
+#### **2019-09-27 第 09 题**
 
+> 将数组 arr 中的元素作为调用函数 fn 的参数
+> ```
+> 输入: function (greeting, name, punctuation) {return greeting + ', ' + name + (punctuation || '!');}, ['Hello', 'Ellie', '!']
+> 输出: Hello, Ellie!
+>```
+来源：[牛客网-JS能力测评经典题](https://www.nowcoder.com/ta/js-assessment)  
+难度：★★☆☆☆  
+解析：[第 09 题](https://github.com/doubleyao5753/Daily-Code/issues/9) 
+
+ ---
 
 #### **2019-08-02 第 08 题**
 
